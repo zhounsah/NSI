@@ -1,0 +1,32 @@
+*{
+    scroll-behavior: smooth;
+  }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;  
+}
+
+nav ul {list-style-type: none; /* une liste sans puce */  }
+
+nav ul li  {
+  display: inline-block ;  /* disposé côte à côte (= aligné) */
+  vertical-align: bottom;  /* sur une ligne en bas */
+  height: 30px;    line-height: 30px;  /* hauteur = 30 = interligne */
+  padding: 0px 10px 0px 10px; /* marge interne pour le texte contenu */
+  background-color: rgb(116,97,205);    /* bleu assez clair */
+}
+
+nav ul li.ici {  /* onglet « page en cours » */
+  height: 40px;  line-height: 40px; /* plus haut : hauteur = 40 = interligne */
+  background-color: rgb(255,123,140); /* onglet rouge */
+  font-size: 1.3em;  text-decoration: underline;  
+}	
+		
+@media all and (max-width: 800px){
+  nav { display: inline-block ; /* FACULTATIF : un petit bloc */  }
+ 
+  nav ul li { display: block ; /* en lignes de même grandeur */   }
+ 
+}

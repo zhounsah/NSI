@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!-- page HTML d'exemple  .. ceci est un commentaire -->
+<html lang="fr">
+	<head>
+		<!-- en-tête -->
+		<meta charset="UTF-8">		
+		<meta name="Author" content="NLG">
+		<title>L'A320 : l'avion de nouvelle génération</title>
+      <link rel="stylesheet" href="style/style.css">
+      <script src="scripts/script.js" defer ></script>
+	</head>
+
+	<body>
+	Prénom : <input type="text" id="prenom" placeholder="entrer votre nom">
+	<button id="mon_bouton">Je valide</button>
+	
+	<input type="radio" name="niveau" value="2de"> seconde<br>
+	<input type="radio" name="niveau" value="1e" checked> première<br>
+	<input type="radio" name="niveau" value="Term"> terminale<br>
+	<button onclick="traitement2()">Je valide</button>
+
+	<input type="checkbox" name="pt_dejeuner" value="cafe"> café<br>
+	<input type="checkbox" name="pt_dejeuner" value="flakes"> céréales<br>
+	<input type="checkbox" name="pt_dejeuner" value="fruit"> fruit<br>
+	<button onclick="traitement3()">Je valide</button>
+
+	<input type="file" name="fichier_image">
+	<input type="submit" value="Envoyer le formulaire">
+
+	<select name="regime">
+		<option value="externe">externe</option>
+		<option value="demi">demi-pensionnaire</option>
+		<option value="interne">interne</option>
+	</select>
+	<button onclick="traitement4()">Je valide</button>
+
+	<select name="dessert[]" multiple>
+		<option value="fromage">fromage</option>
+		<option value="tarte_citron">tarte au citron</option>
+		<option value="cafe">cafe</option>
+	</select>
+	<button onclick="traitement5()">Je valide</button>
+
+	
+
+
+
+   </body>
+
+</html>

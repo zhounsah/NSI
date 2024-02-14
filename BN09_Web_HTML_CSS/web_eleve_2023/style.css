@@ -1,0 +1,27 @@
+h1 {
+    text-align: center;
+    background-color: yellow;
+    text-shadow: orange 4px 2px;
+    text-transform: uppercase;
+}
+
+h2,h3 {
+    text-align: center;
+    background-color: aqua;
+    text-shadow: blueviolet 4px 2px;
+    text-transform: uppercase;
+}
+em {
+    background-color: brown;
+}
+
+.toto {
+    background-color: coral;
+    text-transform: uppercase;
+}
+
+div {
+    text-align: center;
+    padding-bottom: 20px; /* hauteur du footer */
+}
+

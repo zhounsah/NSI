@@ -1,0 +1,13 @@
+<form name="inscription" action="analyse.php" method="GET">
+    <fieldset> <!-- fieldset permet de grouper les champs -->
+        <label for="adresse_mail">e-mail :</label>
+        <input type="email" name="adresse_mail" size="35" 
+               placeholder="pseudo@domain.tld (tld=top-Level Domain)" required><br>
+    </fieldset>
+    <fieldset>
+        <label for="abonnement">Souhaitez-vous la newsletter ?</label>
+        <input type="radio" name="abonnement" value="1" checked="1" /> oui
+        <input type="radio" name="abonnement" value="0" /> non<br /><br />
+    </fieldset>
+    <input type="submit" value="Envoyer">
+</form>

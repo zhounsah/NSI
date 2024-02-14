@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<!-- page HTML d'exemple  .. ceci est un commentaire -->
+<html lang="fr">
+	<head>
+		<!-- en-tête -->
+		<meta charset="UTF-8">		
+		<meta name="Author" content="NLG">
+		<title>Un exemple de page web en HTML5</title>
+      <link rel="stylesheet" href="style.css">
+      <script src="script.js" defer ></script>
+	</head>
+
+	<body>
+   <!-- corps -->
+		<header>
+         <button id="mon_bouton"> Mon bouton </button>
+         <button id="bouton_couleur"> Couleur </button>
+         <input type="text" id="prenom" placeholder="Entrer votre prénom"> 
+         <p id="bienvenue"></p>
+         <h1>Un exemple de page web en HTML5 (titre en taille 1)</h1></header>
+      <main>
+         <section>
+            <h2>Quelques trucs à connaître</h2>
+            <div id = "les_titres">
+               <h3>Un titre (taille 3)</h3>
+               <h4>Un titre (taille 4)</h4>
+               <h5>Un titre (taille 5)</h5>
+               <h6>Un titre (taille 6)</h6>
+               <p id="paragraphe_special">
+                  Un 1<sup>er</sup> paragraphe.
+                  On remarque qu'un saut de ligne dans le code source,
+                  ne correspond pas à un saut de ligne dans le navigateur.
+              </p>
+            </div>
+            <div id = "les_caractères_spéciaux">
+               <h2>Caractères spéciaux</h2>
+               <p>En UTF-8, pas de souci pour ces caractères spéciaux : € ≤ ≥ ≠ ...</p>
+               <p>
+                  Cependant quelques caractères spéciaux doivent être écrits en 
+                  <a href="https://fr.wikibooks.org/wiki/Le_langage_HTML/Entit%C3%A9s">
+                  <strong>entités HTML</strong></a><br>
+                  Voici ci-dessous une liste (ul : unordered list) où chaque élément 
+                  est appelé un list item (li) :
+               </p>
+               <ol>
+                  <li>&lt; : less than</li>
+                  <li>&gt; : greater than</li>
+                  <li>&amp; : esperluette en français, ampersand en anglais)</li>
+                  <li>
+                     &nbsp; : un espace insécable permet d'empêcher un retour à 
+                     la ligne sur les blocs de trois chiffres d'un nombre long,
+                     comme 123 456 789 101 112.
+                  </li>
+               </ol>
+            </div>
+            <div id="le_code_source">
+               <h3>Code source</h3>
+               <p>
+                  Dans un bon navigateur, on peut visualiser le code source de toute page
+                  HTML en faisant : 
+               </p>
+               <ul>
+                  <li>Chrome : Menu → Plus d'outils → Outils Développement (puis onglet sources)</li>
+                  <li>Firefox : Menu → Développement Web → Code source / ou / Outils Développement</li>
+               </ul>
+            </div>
+            <div id = "le_W3C_validator">
+               <h3>Le W3C validator</h3>
+               <p>
+                  Le <a href="https://w3.org/">World Wide Web Consortium "W3C"</a> est un organisme 
+                  régissant les règles du web.<br>
+                  <br>
+                  Ce consortium est présidé par le fondateur du Web : <strong>Sir 
+                  Tim Berners-Lee</strong> (et lauréat du prix Turing).<br>
+                  <img src="img/WEB_Tim_Berners-Lee.jpg" height="352" width="470" alt="photo de Tim Berners-Lee" 
+                  title="Tim Berners-Lee" ><br>		
+                  Dernière chose, <em>last but not least</em>, le W3C met à disposition un 
+                  validateur de code HTML, ici :
+                  <a href="https://validator.w3.org">
+                     <img src="img/WEB_valid-html.png" height="31" width="88" 
+                     alt="logo d'un code HTML validé" title="cliquez pour visiter le Validator">
+                  </a>
+               </p>
+            </div>
+            <hr><hr><hr>
+         </section>
+         
+         <section>    
+            <h2>Le processeur d'un ordinateur : Horloge et chaîne de traitement</h2>
+            <div>
+               <h3>Horloge</h3>
+               <img src="img/CPU_horloge.jpg" alt="cadence d'horloge montrant les fronts montants">
+            </div> 
+            <div>
+               <h3>Pipeline (chaîne de traitement)</h3>
+               <h4>Définition d'un pipeline</h4>
+               <p>
+                  En microarchitecture, <span class="toto">un pipeline</span> (ou chaîne de 
+                  traitement), consiste à découper une instruction en plusieurs étapes.
+                  <blockquote>
+                     Avec un pipeline, le processeur peut commencer une
+                     nouvelle instruction sans avoir terminé la précédente.		
+                     <br> ==&gt; Donc un gain de temps !
+                  </blockquote>
+               </p>
+
+               <h4>Processeur sans pipeline (chaîne de traitement)</h4>
+               <p>
+                  Considérons ces 5 étapes nécessaires pour traiter 
+                  une instruction :
+               </p>
+               <table border="1"> <!--  temporaire : on remplacera l'attribut de 
+                  bordure par du CSS plus tard -->
+                  <tr>
+                     <th>code</th>
+                     <th>dénomination</th>
+                     <th>description</th>
+                  </tr>
+                  <tr>
+                     <td>IF</td>
+                     <td>Instruction Fetch<br><em>Fetch = Va chercher</em></td>
+                     <td>Charge l'instruction à exécuter dans le pipeline</td>
+                  </tr>
+                  <tr>
+                     <td>ID</td>
+                     <td>Instruction Decode</td>
+                     <td>Décode l'instruction et adresse les registres</td>
+                  </tr>
+                  <tr>
+                     <td>EX</td>
+                     <td>Execute</td>
+                     <td>
+                        Exécute l'instruction (par l'unité arithmétique
+                        et logique : ALU)
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>MEM</td>
+                     <td>Memory</td>
+                     <td>
+                        Accède à la mémoire :<br>
+                        * soit en lecture : dans le cas d'une instruction du type STORE<br>
+                        * soit en écriture : dans le cas d'un LOAD
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>WB</td>
+                     <td>Write Back</td>
+                     <td>
+                        Ecrit le résultat dans un registre. <br>
+                        Une écriture en registre WB fait suite à :<br>
+                        * un LOAD (RAM → registre)<br>
+                        * un MOV (registre → registre)<br>
+                        * ou un calcul de l'ALU
+                     </td>
+                  </tr>	
+               </table>
+               <p>
+                  En supposant que chaque étape met 1 cycle d'horloge pour s'exécuter.<br> 
+                  ==&gt; Il faut normalement 5 cycles pour exécuter une instruction !<br>
+                  ==&gt; Il faut 15 cycles pour réaliser 3 instructions !!!
+               </p>
+               <img src="img/CPU_Horloge_NoPipeline.gif" alt="les instructions au rythme de l'horloge sans pipeline">
+            </div> 
+            <div>
+               <h3>Processeur avec pipeline (chaîne de traitement)</h3>
+               <p>
+                  Le 1<sup>er</sup> ordinateur à utiliser cette technique est l'IBM Stretch,*
+                  conçu en 1961.<br>
+                  C'est une forme de multitâche .. comparable à une ligne de montage en industrie.<br>
+                  Chacune des étapes d’un pipeline est appelé <strong>étage</strong>.<br>
+                  Le nombre d'étages d'un pipeline est appelé sa <strong>profondeur</strong>.
+               </p>	
+               <img src="img/CPU_Horloge_pipeline.gif" alt="Une horloge">
+               <p>
+                  Pour un processeur doté d'un pipeline à 5 étages, il faut 9 cycles pour
+                  exécuter 5 instructions.<br>
+                  À t = 5, tous les étages du pipeline sont sollicités, et les 5 opérations
+                  ont lieu en même temps.
+               </p>
+               <p>
+                  Aujourd'hui les processeurs ont des profondeurs supérieures à 10.
+               </p>
+            </div>
+         </section>
+      </main>
+      <footer>
+         <p> Ici, dans le pied de page, on trouve en général  : les mentions légales, un lien pour joindre l'auteur.</p>
+      </footer>
+	</body>
+</html>

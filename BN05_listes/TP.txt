@@ -1,0 +1,57 @@
+TP Déplacement
+
+III. Première fonction du robot : en avant !
+3) La variable avance
+
+
+IV. Deuxième fonction du robot : en arrière !
+
+
+
+from microbit import *
+
+def avance(v):
+# le mode "avance" à la vitesse v (entier entre 0 et 1023)
+    pin8.write_digital(1) # direction M1
+    pin12.write_digital(0) # direction M2
+    pin1.write_analog(v) # vitesse M1
+    pin2.write_analog(v) # vitesse M2
+
+
+def recule(v):
+# le mode "avance" à la vitesse v (entier entre 0 et 1023)
+    pin8.write_digital(0) # direction M1
+    pin12.write_digital(1) # direction M2
+    pin1.write_analog(v) # vitesse M1
+    pin2.write_analog(v) # vitesse M2
+    
+def gauche(v):
+# le mode "avance" à la vitesse v (entier entre 0 et 1023)
+    pin8.write_digital(0) # direction M1
+    pin12.write_digital(0) # direction M2
+    pin1.write_analog(v) # vitesse M1
+    pin2.write_analog(v) # vitesse M2
+    
+def droite(v):
+# le mode "avance" à la vitesse v (entier entre 0 et 1023)
+    pin8.write_digital(1) # direction M1
+    pin12.write_digital(1) # direction M2
+    pin1.write_analog(v) # vitesse M1
+    pin2.write_analog(v) # vitesse M2
+
+
+avance(500) # le robot avance pendant 2s (vitesse faible)
+sleep(1000)
+
+droite(500)
+sleep(500)
+
+avance(500)
+sleep(500)
+
+gauche(500)
+sleep(500)
+
+avance(500)
+sleep(1500)
+

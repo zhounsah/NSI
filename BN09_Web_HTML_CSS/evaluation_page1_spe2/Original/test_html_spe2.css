@@ -1,0 +1,26 @@
+main {
+    text-align: left;
+    padding-top: 20px; 
+}
+
+nav {
+   text-align: center;
+} 
+
+nav li { 
+  display: inline; 
+  padding: 10px;
+  background-color: lightblue;
+}
+
+table, th, td {
+  border: 2px solid;
+  border-collapse: collapse;
+  width: 80%;
+}
+th {
+  height: 25px;
+}
+td {
+   text-align: center;
+}
