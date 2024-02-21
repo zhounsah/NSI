@@ -12,7 +12,10 @@ echo "<p>Nous sommes le $date et il est $heure.</p>";
 
 
 for ($i = 1; $i <= 100; $i++) {
-    echo "<p>ligne $i</p>";
+  echo "<p>ligne $i</p>";
+
+  if ($nb % 2 == 0) {echo "$nb est pair";}
+else {echo "$nb est impair";}
 }
 ?>
   </body>
